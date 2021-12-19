@@ -39,4 +39,6 @@ Courtesy of [tinkercad.com](https://www.tinkercad.com)
 
 You may use the 5V line for the toggle switches / LEDs. Main reason why the 3.3V line was chosen is as it reaches a comfortable brightness for red LEDs I have.
 
+Remember you must use an Arduino Leonardo if you want to use the Keyboard library
+
 ![Schematic](schematics/schematic.jpg "Schmeatic")
