@@ -1,14 +1,31 @@
 
 #include <Keyboard.h>
 int buttonValue;
-int buttonPressCoolDownms = 500;
+const int buttonPressCoolDownms = 500;
+
+const int toggle0Pin = 0;
+int toggle0State = 0;
+int toggle0PreviousState = 0;
+
 void setup() {
   Keyboard.begin();
+  pinMode(toggle0Pin, INPUT);
 }
 
 void loop() {
+  // Read states
+  toggle0State = digitalRead(toggle0Pin);
   buttonValue = analogRead(A0);
 
+  // Toggles
+  if (toggle0State != toggle0PreviousState){
+    toggle0PreviousState = toggle0State;
+    Serial.println("Switch 0 toggled");
+    delay(100);
+  }
+
+  
+  // Buttons
   if (buttonValue >= 200 && buttonValue <= 220) {
     buttonPress(0, analogRead(A0));
   }
@@ -24,6 +41,8 @@ void loop() {
   else if (buttonValue >= 1000) {
     buttonPress(4, analogRead(A0));
   }
+
+  
 }
 
 void buttonPress(int buttonId, int entryReading) {
