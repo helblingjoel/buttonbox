@@ -28,6 +28,8 @@ These links are NOT affiliate links and are not neccessarily the same components
 
 Upload the sketch to your Arduino through the [Arduino IDE](https://www.arduino.cc/en/software)
 
+Use [MHeironimus' joystick library](https://github.com/MHeironimus/ArduinoJoystickLibrary). Install as per the instructions provided by them.
+
 ## 3D Model
 
 This is the first model I have created and it's by no means perfect. It would likely also be better to get this lasercut rather than 3D printed like I did. I would also recommend including some mounts to make assembly a bit easier.
